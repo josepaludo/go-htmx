@@ -6,5 +6,13 @@ import (
 )
 
 func Index(responseWriter http.ResponseWriter, request *http.Request) {
-	http.ServeFile(responseWriter, request, dir.Static("index.html"))
+	http.ServeFile(responseWriter, request, dir.Public("index.html"))
+}
+
+func Styles(responseWriter http.ResponseWriter, request *http.Request) {
+	http.ServeFile(responseWriter, request, dir.Public("index.css"))
+}
+
+func Htmx(responseWriter http.ResponseWriter, request *http.Request) {
+	http.ServeFile(responseWriter, request, dir.Public("htmx.min.js"))
 }

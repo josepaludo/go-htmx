@@ -12,4 +12,6 @@ type Route struct {
 
 var ROUTES = []Route{
 	{"GET /", routes.Index},
+	{"GET /index.css", routes.Styles},
+	{"GET /htmx.min.js", routes.Htmx},
 }

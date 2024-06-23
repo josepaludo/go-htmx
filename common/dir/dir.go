@@ -7,7 +7,7 @@ import (
 
 var (
 	root   string
-	static string
+	public string
 )
 
 func Init() {
@@ -18,11 +18,11 @@ func Init() {
 	}
 
 	root = cwd
-	static = filepath.Join(root, "static")
+	public = filepath.Join(root, "public")
 }
 
-func Static(path string) string {
-	return filepath.Join(static, path)
+func Public(path string) string {
+	return filepath.Join(public, path)
 }
 
 func Root(path string) string {
