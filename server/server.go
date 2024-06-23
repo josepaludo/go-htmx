@@ -1,8 +1,7 @@
 package server
 
 import (
-	"josepaludo/go-htmx/src/dir"
-	"josepaludo/go-htmx/src/env"
+	"josepaludo/go-htmx/common/env"
 	"net/http"
 )
 
@@ -22,8 +21,4 @@ func Serve() {
 	if err := server.ListenAndServe(); err != nil {
 		panic(err)
 	}
-}
-
-func index(responseWriter http.ResponseWriter, request *http.Request) {
-	http.ServeFile(responseWriter, request, dir.Static("index.html"))
 }

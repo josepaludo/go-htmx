@@ -17,7 +17,7 @@ func Init() {
 		panic(err)
 	}
 
-	root = filepath.Join(cwd)
+	root = cwd
 	static = filepath.Join(root, "static")
 }
 

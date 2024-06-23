@@ -1,6 +1,9 @@
 package server
 
-import "net/http"
+import (
+	routes "josepaludo/go-htmx/server/routes"
+	"net/http"
+)
 
 type Route struct {
 	path       string
@@ -8,5 +11,5 @@ type Route struct {
 }
 
 var ROUTES = []Route{
-	{"GET /", index},
+	{"GET /", routes.Index},
 }
